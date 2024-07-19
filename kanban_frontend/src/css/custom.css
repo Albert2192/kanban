@@ -108,6 +108,7 @@
   right: 10px;
   bottom: 5px;
   cursor: pointer;
+  color: #fff;
 }
 .seccionTitulo {
   display: flex;
@@ -132,6 +133,7 @@
   border-radius: 5px;
   border: none;
   background: var(--primary);
+  color: #fff;
 }
 
 .icono {
@@ -169,6 +171,7 @@
   position: absolute;
   top: 0px;
   right: 0px;
+  color: #fff;
 }
 /* ESTILOS DEL MODAL */
 
@@ -272,6 +275,12 @@
 
 .modalSubmit {
   background: var(--primary);
+  color: #fff;
+}
+
+.modalCancel {
+  background: #6b6b6b;
+  color: #fff;
 }
 
 /* LOADING */
