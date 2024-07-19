@@ -1,0 +1,367 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/images/fondo.jpg");
+  /* background-position: center; */
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --pendiente: #f4d03f;
+  --proceso: #2e86c1;
+  --terminado: #28b463;
+
+  --primary: #239b56;
+}
+.topbar {
+  background-color: red;
+}
+.titulo {
+  background: linear-gradient(to right, #314755, #26a0da);
+  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+  padding: 15px 20px;
+  margin: 3px 0px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.titulo h2 {
+  margin: 0px;
+}
+.titulo p {
+  margin: 0px;
+}
+.tableContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-width: 300px;
+  overflow-y: scroll;
+  gap: 5px;
+}
+.containerMainIndividual {
+  /* background-color: red; */
+  padding: 5px 15px;
+  border-radius: 3px;
+  width: 25%;
+  min-width: 250px;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.containerIndividual {
+  max-height: 70vh;
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+.card {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 12px;
+  margin-bottom: 3px;
+  transition: all ease-in-out 0.3s;
+  position: relative;
+}
+.card:hover {
+  position: relative;
+  /* transform: scale(1.1); */
+}
+.card hr {
+  background: red;
+  color: red;
+  border-color: #808b96;
+}
+.card h3 {
+  margin: 8px;
+}
+.card p {
+  margin: 3px;
+}
+.pendiente {
+  border-left: 5px solid var(--pendiente);
+}
+.proceso {
+  border-left: 5px solid var(--proceso);
+}
+.terminado {
+  border-left: 5px solid var(--terminado);
+}
+.btnProceso {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  cursor: pointer;
+}
+.seccionTitulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+}
+
+.NuevaTarea {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 8px;
+  top: calc(50% - 25px);
+  right: 20px;
+  font-size: 16px;
+  padding: 10px 8px;
+  border-radius: 5px;
+  border: none;
+  background: var(--primary);
+}
+
+.icono {
+  font-size: 20px;
+}
+.nombre {
+  margin-left: 10px;
+  /* border-bottom: 2px solid var(--pendiente); */
+}
+
+.asignado {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  padding-top: 18px;
+}
+
+.descripcion {
+  font-size: 13px;
+}
+.descripcionTitulo {
+  font-weight: bold;
+}
+
+.btnDelete {
+  background: red;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+/* ESTILOS DEL MODAL */
+
+/* src/components/PostModal.css */
+
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  max-width: 100w;
+  height: 100vh;
+  position: fixed;
+}
+
+.ReactModal__Content {
+  position: relative;
+  inset: 0px !important;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 340px;
+  max-height: min-content;
+  position: relative !important;
+}
+
+.ModalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: green;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #242424;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.modal-footer button {
+  margin-left: 10px;
+}
+
+.overalay {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: red; */
+}
+.label {
+  color: #242424;
+  /* font-weight: bold; */
+  font-size: 15px;
+}
+.inputContainer {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  margin-bottom: 10px;
+  justify-content: center;
+  /* align-items: center; */
+}
+.inputContainer input,
+.inputContainer textarea {
+  background: #fff;
+  border: 1px solid #aeb6bf;
+  width: 90%;
+  border-radius: 3px;
+  resize: none;
+  font-size: 15px;
+  accent-color: #000;
+  padding: 10px;
+  color: #000;
+  outline: none;
+}
+.modalCancel,
+.modalSubmit {
+  font-size: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+.modalSubmit {
+  background: var(--primary);
+}
+
+/* LOADING */
+.overlayCargando {
+  inset: 0;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.overlayCargando.active {
+  display: flex;
+}
+
+/* BOTONES */
+.btnEnProceso {
+  background: var(--proceso);
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.btnFinalizar {
+  background: var(--primary);
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.nuevoMovil {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
+  border-radius: 50%;
+  border: none;
+  color: var(--terminado);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .nuevoMovil {
+    display: flex;
+  }
+  .NuevaTarea {
+    display: none;
+  }
+}
+
+.spinner {
+  color: #d6eaf8;
+}
+
+/* ESTILOS ALERTA */
+
+.alerta {
+  background: red;
+  position: absolute;
+  width: 250px;
+  height: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  border-radius: 3px;
+  padding: 12px 5px;
+  right: -260px;
+  transition: all ease-in-out 0.5s;
+}
+
+.alerta p {
+  padding: 0;
+  margin: 0;
+}
+
+.alerta.activa {
+  right: 5px;
+}
