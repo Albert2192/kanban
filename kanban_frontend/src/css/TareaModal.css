@@ -27,3 +27,12 @@
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+.closeModal {
+  background: red;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import axios from "../config/axiosConfig";
 import "../css/TareaModal.css";
@@ -23,11 +23,9 @@ const TareaModal = ({
     setAsignado("");
   };
 
-  //   useEffect(() => {
-  //     if (isOpen) {
-  //       handleReset();
-  //     }
-  //   }, [isOpen]);
+  useEffect(() => {
+    handleReset();
+  }, [isOpen]);
 
   const handleSubmit = (event) => {
     cargandoSpinner(true);
@@ -70,7 +68,9 @@ const TareaModal = ({
       <div className="overlay">
         <div className="modal-header">
           <h2>Crear Tarea</h2>
-          <button onClick={onRequestClose}>&times;</button>
+          <button className="closeModal" onClick={onRequestClose}>
+            <i className="fa fa-times"></i>
+          </button>
         </div>
         <div className="modal-body">
           <form onSubmit={handleSubmit}>
