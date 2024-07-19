@@ -73,7 +73,7 @@ const TareasList = ({
             </div>
             <hr />
           </div>
-          <div className="containerIndividual">
+          <div className="containerIndividual style-1">
             {posts
               .filter((post) => post.estado === 0)
               .map((post) => (
@@ -120,7 +120,7 @@ const TareasList = ({
             <hr />
           </div>
 
-          <div className="containerIndividual">
+          <div className="containerIndividual style-1">
             {posts
               .filter((post) => post.estado === 1)
               .map((post) => (
@@ -167,7 +167,7 @@ const TareasList = ({
             <hr />
           </div>
 
-          <div className="containerIndividual">
+          <div className="containerIndividual style-1">
             {posts
               .filter((post) => post.estado === 2)
               .map((post) => (
